@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { View, TextInput, Button, StyleSheet, Alert } from "react-native";
+import { THEME } from "../theme";
 
-const AddTodo = ({ onSubmit }) => {
+export const AddTodo = ({ onSubmit }) => {
   const [value, setValue] = useState("");
 
   const pressHandler = () => {
@@ -28,8 +29,6 @@ const AddTodo = ({ onSubmit }) => {
   );
 };
 
-export default AddTodo;
-
 const styles = StyleSheet.create({
   block: {
     flexDirection: "row",
@@ -41,7 +40,7 @@ const styles = StyleSheet.create({
     width: "80%",
     borderStyle: "solid",
     borderBottomWidth: 2,
-    borderColor: "#3949ab",
+    borderColor: THEME.MAIN_COLOR,
     padding: 10
   }
 });
